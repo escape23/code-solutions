@@ -1,0 +1,32 @@
+.header-container {
+  display: flex;
+  align-items: center;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.header-navigation {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo {
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  color: var(--button-color);
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  margin-right: 76px;
+}
+
+.header-menu {
+  display: flex;
+  gap: 40px;
+}
+
+.open-menu-btn {
+}
