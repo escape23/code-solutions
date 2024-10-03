@@ -31,10 +31,15 @@
       {% block header %} {% include "header.html" %} {% endblock %}
     </header>
 
-    <main>{% block content %}{% endblock %}</main>
+    <main>
+      {% block content %}{% endblock %}
+    </main>
     <footer>
       {% block footer %} {% include "footer.html" %} {% endblock %}
     </footer>
+    <div>
+      {% block div %} {% include "email-form.html" %} {% endblock %}
+    </div>
     <script src="/static/main.js"></script>
   </body>
 </html>
