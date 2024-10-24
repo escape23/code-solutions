@@ -1,3 +1,43 @@
+.container-window{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate (-50%, -50%);
+    }
+
+.popup{
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content{
+    height: 490px;
+    width: 440px;
+    background: linear-gradient(135deg, #1c1a6f 0%, #2b296e 50%, #121040 100%);
+    padding: 20px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.button{
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    font-size: 16px;
+    color: #fff;
+    gap: 10px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #006aff, #0090ff);
+    cursor: pointer;
+}
+
 *{
     padding: 0;
     margin: 0;
@@ -5,7 +45,6 @@
 }
 .con-con{
     height: 100vh;
-    display: felx;
     align-items: center;
     justify-content: space-evenly;
 }
@@ -17,7 +56,7 @@
 }
 .con-left-title h2{
     font-weight: 600;
-    color: #000000;
+    color: #fff;
     font-size: 40px;
     margin-bottom: 5px;
 }
@@ -25,7 +64,7 @@
     border: none;
     width: 120px;
     height: 5px;
-    background-color: #000000;
+    background-color: #0090ff;
     border-radius: 10px;
     margin-bottom: 20px;
 }
@@ -60,4 +99,9 @@
     border-radius: 50px;
     background: linear-gradient(135deg, #006aff, #0090ff);
     cursor: pointer;
+}
+
+.close-but{
+    display: flex;
+    gap: 20px
 }

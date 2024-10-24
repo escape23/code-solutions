@@ -1,19 +1,63 @@
 <head>
     <link rel="stylesheet" href="email-form.css">
 </head>
-<body>
-    <div class="con-con">
-        <form action="https://api.web3forms.com/submit" method="POST" class="con-left">
-            <div class="con-left-title">
-                <h2>Get in touch</h2>
-                <hr>
-            </div>
-            <input type="hidden" name="access_key" value="0611c4e5-0d42-45ee-b0fb-34ac1ba5ed9c">
-            <input type="text" name="name" placeholder="Your name" class="con-inputs" required>
-            <input type="email" name="email" placeholder="Your email" class="con-inputs" required>
-            <textarea name="message" placeholder="Your Message" class="con-inputs" required></textarea>
-            <button type="submit">Submit</button>
-        </form>
-        <div class="con-right"></div>
+
+<div class="container-window">
+    <a href="#" class="button" id="button">Get In Touch</a>
+</div>
+
+<div class="popup">
+    <div class="popup-content">
+        <div class="con-con">
+            <form action="https://api.web3forms.com/submit" method="POST" class="con-left">
+                <div class="con-left-title">
+                    <h2>Get in touch</h2>
+                    <hr>
+                </div>
+                <input type="hidden" name="access_key" value="0611c4e5-0d42-45ee-b0fb-34ac1ba5ed9c">
+                <input type="text" name="name" placeholder="Your name" class="con-inputs" required>
+                <input type="email" name="email" placeholder="Your email" class="con-inputs" required>
+                <textarea name="message" placeholder="Your Message" class="con-inputs" required></textarea>
+                <div class="close-but">
+                    <button type="submit">Submit</button>
+                    <a href="#" class="button" id="close">Close</a>
+                </div>
+                
+            </form>
+            <div class="con-right"></div>
+        </div>
     </div>
-</body>
+</div>
+</div>
+
+
+<script>
+    const popup = document.querySelector(".popup");
+    const popupContent = document.querySelector(".popup-content");
+    const openButton = document.getElementById("button");
+    const closeButton = document.getElementById("close");
+
+    function closePopup() {
+        popup.style.display = "none";
+    }
+
+    openButton.addEventListener("click", function() {
+        popup.style.display = "flex";
+    });
+
+    closeButton.addEventListener("click", closePopup);
+
+    // Close popup when clicking outside
+    document.addEventListener("click", function(event) {
+        if (popup.style.display === "flex" && !popupContent.contains(event.target) && event.target !== openButton) {
+            closePopup();
+        }
+    });
+
+    // Close popup when pressing Escape key
+    document.addEventListener("keydown", function(event) {
+        if (event.key === "Escape" && popup.style.display === "flex") {
+            closePopup();
+        }
+    });
+</script>
